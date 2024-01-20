@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<script src="./three.js"></script>
+<script src="./panolens.js
+"></script>
+
+<body>
+    <script>
+        const url_split = document.location.href.split("/")
+        var sub_dir = url_split[url_split.length-1]
+        //sub_dir = sub_dir == 'mtr1' ? '20240119_132847_262.jpg' : sub_dir == 'mtr2' ? '20240119_132921_551.jpg' : sub_dir == 'mtr3' ? '20240119_132944_041.jpg' : sub_dir;
+        const panorama = new PANOLENS.LittlePlanet('image', `./${sub_dir}.jpg`);
+        const viewer = new PANOLENS.Viewer();
+        viewer.add(panorama);
+    </script>
+</body>
+
+</html>
